@@ -1,0 +1,12 @@
+/*-------Apuntes Git------*/
+**Inicializar proyectos en Git**
+ En Consola GIT BASH: 
+- Git init (para inicializar una carpeta en git)
+- Git remote add origin https://github.com/nombre/proyecto (copiar link https de clone)
+- Git remote -v (Para ver si esta conectado correctamente al repositorio)
+- Git remote rm origin (Eliminar origen viejo)
+****Subir cambios a git**** 
+- Git status 
+- Git add . (agregar todos los archivos en el proyecto)
+- Git add archivo.css (adjuntar archivo especifico)
+- Git commit -m "mensaje" 
