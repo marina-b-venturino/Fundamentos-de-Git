@@ -59,3 +59,9 @@
 /*-----Comandos terminal-----*/
 - cd / (para ir al home o carpeta principal o raiz del disco duro)
 - pwd (para ver la ruta donde estas parado)
+- ls (para ver todas las carpetas)
+- ls -al (para listar todos los archivos incluyendo los ocultos)
+- ls -l (para listar todos los archivos excepto los ocultos)
+- ctrl + l (para limpiar la terminal o consola)
+- cat archivo.txt (para ver el contenido del archivo)
+- rm archivo.txt (para borrar archivos, si se hace mal se puede borrar el disco duro)
