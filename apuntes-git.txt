@@ -1,11 +1,11 @@
-/*-------Apuntes de comandos para Git------*/
+/*-------Apuntes de comandos para aprender Git------*/
 
 /*-----Comandos para inicializar proyectos en Git-----*/
  En Consola GIT BASH: 
 - git init (para inicializar una carpeta en git)
 - git remote add origin https://github.com/ejemplo/ejemplo (copiar link https de clone)
-- git remote -v (Para ver si esta conectado correctamente al repositorio)
-- git remote rm origin (Eliminar origen viejo)
+- git remote -v (para ver si esta conectado correctamente al repositorio)
+- git remote rm origin (eliminar origen viejo)
 
 /*-----Comandos para subir cambios a git-----*/ 
 - git status (ver estado de los archivos del proyecto)
