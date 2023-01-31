@@ -55,3 +55,7 @@
 - git log – index.html (busca los commits en un archivo en específico)
 - git log -S “Por contenido” (buscar los commits con el contenido dentro del archivo)
 - git log > log.txt (guardar los logs en un archivo txt)
+
+/*-----Comandos terminal-----*/
+- cd / (para ir al home o carpeta principal o raiz del disco duro)
+- pwd (para ver la ruta donde estas parado)
