@@ -29,6 +29,9 @@
 - git checkout -b Nombrerama (crea una rama llamada "Nombrerama" y se posiciona en ella)
 - git fetch (para cargar las ramas creadas recientemente)
 
+/*-----Comandos para unir ramas-----*/
+- git merge Nombrerama (para unir 2 ramas)
+
 /*-----Comandos varios-----*/
 - git status (para ver el estado de la rama)
 - git show (para ver todos los cambios hechos)
