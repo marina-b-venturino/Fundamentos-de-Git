@@ -1,21 +1,54 @@
 /*-------Apuntes de comandos para Git------*/
 
-****Comandos para inicializar proyectos en Git****
+/*-----Comandos para inicializar proyectos en Git-----*/
  En Consola GIT BASH: 
-- Git init (para inicializar una carpeta en git)
-- Git remote add origin https://github.com/ejemplo/ejemplo (copiar link https de clone)
-- Git remote -v (Para ver si esta conectado correctamente al repositorio)
-- Git remote rm origin (Eliminar origen viejo)
+- git init (para inicializar una carpeta en git)
+- git remote add origin https://github.com/ejemplo/ejemplo (copiar link https de clone)
+- git remote -v (Para ver si esta conectado correctamente al repositorio)
+- git remote rm origin (Eliminar origen viejo)
 
-****Comandos para subir cambios a git**** 
-- Git status (ver estado de los archivos del proyecto)
-- Git add . (agregar todos los archivos en el proyecto)
-- Git add archivo.css (adjuntar archivo especifico)
-- Git commit -m "mensaje" (subir un cambio con mensaje)
+/*-----Comandos para subir cambios a git-----*/ 
+- git status (ver estado de los archivos del proyecto)
+- git add . (agregar todos los archivos en el proyecto al repositorio)
+- git add archivo.css (adjuntar archivo especifico)
+- git commit -m "mensaje" (subir un cambio con mensaje)
 
-****Comandos varios****
-- Git status (para ver el estado de la rama)
-- Git show (para ver todos los cambios hechos)
-- Git log archivo.css (para ver el historial de cambios en un archivo)
+/*-----Comandos para borrar y/o volver commits atras-----*/
+- git reset idcommit --hard (se borra todo el historial y los registros de Git pero guardamos los cambios que tengamos en staging, así podemos aplicar las últimas actualizaciones a un nuevo commit)
+- git reset idcommit --soft (se borra todo. Toda la información de los commits y del área de staging se borra del historial)
+- git commit -am (agrega los archivos al repositorio pero solo funciona con los archivos a los que se le ha hecho "git add" previamente)
+- git rm --catched (elimina los archivos de nuestro repositorio local y del área de staging, pero los mantiene en nuestro disco duro)
+- git rm --force (elimina los archivos de Git y del disco duro)
+
+/*-----Comandos para crear ramas o moverse entre ramas-----*/
+- git branch Nombrerama (para crear una rama)
+- git branch -l (para listar todas las ramas que existen)
+- git branch -d Nombrerama (elimina la rama, y con -d se fuerza la peticion de borrar)
+- git branch -m Nombrerama Ramanueva (para renombrar la rama "Nombrerama" por "Ramanueva")
+- git checkout Nombrerama (para cambiarte de rama)
+- git checkout -b Nombrerama (crea una rama llamada "Nombrerama" y se posiciona en ella)
+- git fetch (para cargar las ramas creadas recientemente)
+
+/*-----Comandos varios-----*/
+- git status (para ver el estado de la rama)
+- git show (para ver todos los cambios hechos)
+- git log archivo.css (para ver el historial de cambios en un archivo)
+- git diff (diferencias entre un cambio y el cambio anterior)
 - cat archivo.txt (para ver el contenido del archivo)
 - code archivo.txt (para abrir el archivo en el editor de codigo)
+
+/*-----Comandos git log-----*/
+- git log --oneline (te muestra el id commit y el título del commit)
+- git log --decorate (te muestra donde se encuentra el head point en el log)
+- git log --stat (explica el número de líneas que se cambiaron brevemente)
+- git log -p (explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido)
+- git shortlog (indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits)
+- git log -3 (limitamos el número de commits)
+- git log --after=“2018-1-2” (commits para localizar por fechas)
+- git log --after=“today” (commits para localizar por fechas)
+- git log --after=“2018-1-2” --before=“today” (commits para localizar por fechas)
+- git log --grep=“INVIE” (busca los commits que cumplan tal cual está escrito entre las comillas)
+- git log --grep=“INVIE” –i (busca los commits que cumplan sin importar mayúsculas o minúsculas)
+- git log – index.html (busca los commits en un archivo en específico)
+- git log -S “Por contenido” (buscar los commits con el contenido dentro del archivo)
+- git log > log.txt (guardar los logs en un archivo txt)
