@@ -12,6 +12,8 @@
 - git add . (agregar todos los archivos en el proyecto al repositorio)
 - git add archivo.css (adjuntar archivo especifico)
 - git commit -m "mensaje" (subir un cambio con mensaje)
+- git push origin Nombrerama (enviar al repositorio los cambios hechos localmente)
+- git pull origin Nombrerama (traer cambios de la rama)
 
 /*-----Comandos para borrar y/o volver commits atras-----*/
 - git reset idcommit --hard (se borra todo el historial y los registros de Git pero guardamos los cambios que tengamos en staging, así podemos aplicar las últimas actualizaciones a un nuevo commit)
@@ -31,14 +33,30 @@
 
 /*-----Comandos para unir ramas-----*/
 - git merge Nombrerama (para unir 2 ramas)
+- git merge --abort (para revertir un merge)
 
 /*-----Comandos varios-----*/
 - git status (para ver el estado de la rama)
 - git show (para ver todos los cambios hechos)
-- git log archivo.css (para ver el historial de cambios en un archivo)
+- git show idcommit (nos muestra los cambios realizados en ese commit especifico mediante su id)
+- git log (para ver el historial de commits)
 - git diff (diferencias entre un cambio y el cambio anterior)
 - cat archivo.txt (para ver el contenido del archivo)
 - code archivo.txt (para abrir el archivo en el editor de codigo)
+- git config -l (permite ver los parametros de la configuracion y sus valores)
+- git config -global user.mail "ejemplo@mail.com" (permite modificar el valor de user.mail en la configuracion)
+- git show-branch (muestra cuales son las ramas que existen y cual es su historia)
+- git show-branch --all (muestra cuales son las ramas que existen y cual es su historia)
+
+
+/*-----Comandos tags-----*/
+- git tag -a Nombretag idcommit (para crear un nuevo tag y asignarlo a un commit)
+- git tag -d Nombretag (borrar un tag en el repositorio local)
+- git show-ref --tags (para listar los tags de nuestro repositorio)
+- git tag (para listar los tags de nuestro repositorio)
+- git push origin --tags (para subir un tag a nuestro repositorio)
+- git tag -d Nombretag (paso 1 para borrar un tag del repositorio)
+- git push origin :refs/tags/Nombretag. (paso 2 para borrar un tag del repositorio)
 
 /*-----Comandos git log-----*/
 - git log --oneline (te muestra el id commit y el título del commit)
@@ -55,6 +73,8 @@
 - git log – index.html (busca los commits en un archivo en específico)
 - git log -S “Por contenido” (buscar los commits con el contenido dentro del archivo)
 - git log > log.txt (guardar los logs en un archivo txt)
+- git log --all --graph (para visualizar el arbol de git)
+- git log --all --graph --decorate --oneline (visualiza el arbol de git mas comprimido)
 
 /*-----Comandos terminal-----*/
 - cd / (para ir al home o carpeta principal o raiz del disco duro)
@@ -65,3 +85,10 @@
 - ctrl + l (para limpiar la terminal o consola)
 - cat archivo.txt (para ver el contenido del archivo)
 - rm archivo.txt (para borrar archivos, si se hace mal se puede borrar el disco duro)
+- gitk (se abre el historial de ramas en una ventana similar a fork)
+
+/*-----Comando ara crear la llave SSH-----*/
+- ssh-keygen -t rsa -b 4096 -C  "ejemplo@mail.com" (para generar la llave ssh publica y privada)
+- eval $(ssh-agent -s) (para consultar si el servidor de ssh esta funcionando)
+- ssh-add ~/.ssh/id_rsa (para añadir la llave privada al sistema)
+- git remote set-url origin ssh-url (para conectar git con el repositorio mediante ssh, ssh-url seria la ruta ssh del repositorio)
