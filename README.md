@@ -1,6 +1,6 @@
 # Fundamentos-de-Git
-Hola👋 Aqui dejare mis apuntes sobre Git del Curso Profesional Git y Github Platzi
-Tambien subire consejos o tips sobre git y el flujo de trabajo con git
+Hola👋 Aqui dejare mis apuntes sobre Git del Curso Profesional Git y Github Platzi.
+Tambien subire datos, consejos o tips sobre git y el flujo de trabajo con git.
 
 Para clonarlo puedes seguir estos comandos 👇👇👇
  En Consola GIT BASH: 
@@ -19,7 +19,7 @@ Para poder desarrollar software de manera óptima y ordenada, necesitamos tener 
 - El programador sube su trabajo con git push origin #nombre_rama
 - El encargado de organizar el proyecto baja, revisa y unifica todos los cambios
 
-# Flujo de trabajo profesional con pull requests
+# Flujo de trabajo profesional con pull request
 En un entorno profesional normalmente se bloquea la rama master, y para enviar código a dicha rama pasa por un code review y luego de su aprobación se unen códigos con los llamados merge request.
 
 Para realizar pruebas enviamos el código a servidores que normalmente los llamamos staging develop (servidores de pruebas) luego de que se realizan las pruebas pertinentes tanto de código como de la aplicación estos pasan al servidor de producción con el ya antes mencionado merge request.
@@ -31,3 +31,17 @@ Los PR (pull requests) son la base de la colaboración a proyectos Open Source, 
 - El pull request permite que otros miembros del equipo revisen el código y así aprobar el merge a la rama.
 - Permite a las personas que no forman el equipo, trabajar y colaborar con una rama.
 - La persona que tiene la responsabilidad de aceptar los pull request y hacer los merge tienen un perfil especial y son llamados DevOps
+
+NOTA: En Gitlab esto se le llama "Merge request" y en Bitbucket "Push request".
+
+# Cómo se realiza un pull request
+- Se trabaja en una rama paralela los cambios que se desean git checkout -b <rama>.
+- Se hace un commit a la rama git commit -am '<Comentario>'.
+- Se suben al remoto los cambios git push origin <rama>.
+- En GitHub se hace el pull request comparando la rama master con la rama del fix.
+-Uno, o varios colaboradores revisan que el código sea correcto y dan feedback (en el chat del pull request).
+- El colaborador hace los cambios que desea en la rama y lo vuelve a subir al remoto (automáticamente jala la historia de los cambios que se hagan en la rama, en remoto).
+- Se aceptan los cambios en GitHub.
+- Se hace merge a master desde GitHub.
+ 
+IMPORTANTE: Cuando se modifica una rama, también se modifica el pull request.
