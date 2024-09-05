@@ -68,7 +68,7 @@
 - git stash (se guardan los cambios en el stash de git)
 - git stash list (para ver lo que hay guardado en el stash)
 - git stash pop (para recuperar los ultimos cambios desde el stash)
-- git stash pop stash@{1} (para recuperar un stash especifico)
+- git stash pop stash@{1} ( para recuperar un stash especifico )
 - git stash save "mensaje" (para agregarle un mensaje al stash y poder diferenciarlo del resto de los cambios guardados en el stash)
 - git stash clear (para eliminar todos los archivos del stash)
 - git stash branch Nombrerama (se crea una nueva rama y los cambios los guarda en el stash de esa rama)
